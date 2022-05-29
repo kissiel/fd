@@ -1,0 +1,19 @@
+name: fd
+version: git
+summary: find entries in your filesystem
+description: |
+    It is a simple, fast and user-friendly alternative to
+    [`find`](https://www.gnu.org/software/findutils/).  While it does not aim
+    to support all of `find`'s powerful functionality, it provides sensible
+
+base: core20
+confinement: devmode
+
+parts:
+    fd:
+        plugin: rust
+        source: .
+
+apps:
+    fd:
+        command:  bin/fd
